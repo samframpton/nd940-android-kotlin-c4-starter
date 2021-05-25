@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!--Data item that holds the reminder details-->
+        <variable
+            name="reminderDataItem"
+            type="com.udacity.project4.locationreminders.reminderslist.ReminderDataItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".locationreminders.ReminderDescriptionActivity">
+
+        <TextView
+            android:id="@+id/reminderDescriptionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_normal"
+            android:text="@{reminderDataItem.title}"
+            android:textSize="@dimen/text_size_large"
+            tools:text="title" />
+
+        <TextView
+            android:id="@+id/reminderDescriptionDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_normal"
+            android:text="@{reminderDataItem.description}"
+            android:textSize="@dimen/text_size_large"
+            tools:text="description" />
+
+        <TextView
+            android:id="@+id/reminderDescriptionLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_normal"
+            android:text="@{reminderDataItem.location}"
+            android:textSize="@dimen/text_size_large"
+            tools:text="location" />
+
+    </LinearLayout>
+</layout>
